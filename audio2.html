@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Multimedia HTML5 (Video)</title>
+    </head>
+    <body style="text-align:center;">
+        <h1>Latihan HTML - Audio 2</h1>
+
+        <!--Buttons-->
+        <button onclick="playVid()" type="button">Play Video</button>
+        <button onclick="pauseVid()" type="button">Pause Video</button>
+        <button onclick="durationVid()" type="button">Duration Video</button>
+        <button onclick="controlsOn()" type="button">Controls On</button>
+        <button onclick="controlsOff()" type="button">Controls Off</button>
+        <button onclick="type="button">Loop Status</button>
+        <button type="button">Loop on</button>
+        <button type="button">Loop off</button>
+
+        <!--Video-->
+        <audio id="timelapse" width="540" controls>
+            <source src="media/JustinBieber - Ghost.mp3" type="audio/mpeg"><br>
+            File format not supported
+        </audio>
+
+        <!--Properties-->
+        <script>
+            var vid = document.getElementById("timelapse");
+
+            function playVid() {
+                vid.play();
+            }
+
+            function pauseVid() {
+                vid.pause();
+            }
+
+            function durationVid() {
+                alert(vid.duration);
+            }
+
+            function controlsOn() {
+                vid.controls = true;
+            }
+
+            function controlsOff() {
+                vid.controls = false;
+            }
+
+            function loopOn() {
+                vid.loop = true;
+            }
+
+            function loopOff() {
+                vid.loop = false;
+            }
+
+            function muteOn() {
+                vid.muted = true;
+            }
+
+            function muteOff() {
+                vid.muted = false;
+            }
+
+            function loopInfo() {
+                alert(vid.loop);
+            }
+
+        </script>
+
+    </body>
+</html>
